@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeS - Sign Up</title>
+    <link rel="icon" href="images/logo.jpg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="headerform">
+    <div class="form_container">
+        <!-- Signup Form -->
+        <div class="form signup_form">
+            <form name="signupForm" action="signuphopes.php" method="post" onsubmit="return validateSignupForm()">
+                <h2>Sign Up</h2>
+                <div class="input_box">
+                    <input type="text" id="signup-name" name="signup-name" placeholder="Enter your username" required onchange="validateSignupName()"/>
+                    <i class="fa-solid fa-user username"></i>
+                </div>
+                <small id="nameError" class="error-message"></small>
+                <div class="input_box">
+                    <input type="text" id="signup-phone" name="signup-phone" placeholder="Enter your phone number" required onchange="validateSignupPhone()"/>
+                    <i class="fa-solid fa-phone phone"></i>
+                </div>
+                <small id="phoneError" class="error-message"></small>
+                <div class="input_box">
+                    <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email" required onchange="validateSignupEmail()"/>
+                    <i class="fa-solid fa-envelope email"></i>
+                </div>
+                <small id="emailError" class="error-message"></small>
+                <div class="input_box">
+                    <input type="password" id="signup-password" name="signup-password" placeholder="Create password" required onchange="validateSignupPass()"/>
+                    <i class="fa-solid fa-lock password"></i>
+                    <i class="fa-regular fa-eye-slash pw_hide" aria-hidden="true" id="password-notvisible"></i>
+                </div>
+                <small id="passwordError" class="error-message"></small>
+                <div class="input_box">
+                    <input type="password" id="signup-confirm-password" name="signup-confirm-password" placeholder="Confirm password" required onchange="validateSignupRepass()"/>
+                    <i class="fa-solid fa-lock password"></i>
+                    <i class="fa-regular fa-eye-slash pw_hide" aria-hidden="true" id="confirmpassword-notvisible"></i>
+                </div>
+                <small id="repasswordError" class="error-message"></small>
+                <button type="submit" class="button_header">Sign Up Now</button>
+                <div class="login_signup">
+                    Already have an account? <a href="loginhopes.php">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
